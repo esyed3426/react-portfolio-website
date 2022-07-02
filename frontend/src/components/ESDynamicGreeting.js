@@ -33,7 +33,7 @@ export const ESDynamicGreeting = () => {
                     options={{
                         strings: ['Hey!', 'Hello!', 'Greetings!', "What's up!?"],
                         autoStart: true,
-                        pauseFor: 10000,
+                        pauseFor: 5000,
                         loop: true, 
                     }}
                     />
