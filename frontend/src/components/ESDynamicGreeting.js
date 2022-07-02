@@ -19,12 +19,12 @@ export const ESDynamicGreeting = () => {
                 <img 
                     src={dancing}
                     alt='cartoon dancing'
-                    width='30px'
+                    width='40px'
                 />
                 <img 
                     src={dancing}
                     alt='cartoon dancing'
-                    width='30px'
+                    width='40px'
                 />
             </div>
             <div>
@@ -52,12 +52,12 @@ export const ESDynamicGreeting = () => {
                 <img 
                     src={dancing}
                     alt='cartoon dancing'
-                    width='30px'
+                    width='40px'
                 />
                 <img 
                     src={dancing}
                     alt='cartoon dancing'
-                    width='30px'
+                    width='40px'
                 />
             </div>
         </div>
