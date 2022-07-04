@@ -4,11 +4,12 @@ import { ESNavBar } from './components/ESNavBar';
 import { ESDynamicGreeting } from './components/ESDynamicGreeting';
 
 const App = () => {
+
   return (
     <>
       <CssBaseline />
-        <ESNavBar />
-        <ESDynamicGreeting />
+      <ESNavBar />
+      <ESDynamicGreeting />
     </>
   );
 }
