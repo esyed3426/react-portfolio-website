@@ -5,7 +5,7 @@ import dancing from './media/cartoonDancing.gif'
 import { motion } from 'framer-motion';
 
 const themeFont = 'Montserrat';
-const themeColor = '#F6BE00';
+const themeColor = '#5D3FD3';
 
 export const ESDynamicGreeting = () => {
     useEffect(() => {
@@ -48,8 +48,7 @@ export const ESDynamicGreeting = () => {
                             duration: 8,
                             repeat: Infinity,
                             delay: 5,
-                            repeatDelay: 20}}
-                        whileHover={{scale: 1.2}}>
+                            repeatDelay: 20}}>
                         <img 
                             src={dancing}
                             alt='cartoon dancing'
@@ -63,8 +62,7 @@ export const ESDynamicGreeting = () => {
                             duration: 8,
                             repeat: Infinity,
                             delay: 5,
-                            repeatDelay: 20}}
-                        whileHover={{scale: 1.2}}>
+                            repeatDelay: 20}}>
                             <div>
                                 <img 
                                     src={dancing}

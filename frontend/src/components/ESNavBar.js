@@ -3,7 +3,7 @@ import {Button, AppBar, Toolbar, Box} from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import dancing from './media/stickfigureDancing.gif';
 
-const themeColor = '#F6BE00';
+const themeColor = '#5D3FD3';
 const themeFont = 'Montserrat';
 const themeFontWeight = 'bold'
 
