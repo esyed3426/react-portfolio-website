@@ -27,25 +27,18 @@ export const ESNavBar = (props) => {
               <Button sx={{border: '0'}} >
                 <HomeIcon fontSize='large' sx={{color: themeColorState, flex:'1'}} ></HomeIcon>
               </Button>
-              <Button style={{fontSize:'25px'}} sx={{marginLeft: '30px', color: themeColorState, fontFamily: themeFontState, fontWeight: themeFontWeightState}} onClick={() => alert("Why did you feel the need to click on me? So intrusive...")}>
+              <Button sx={{marginLeft: '30px', color: themeColorState, fontFamily: themeFontState, fontWeight: themeFontWeightState, fontSize:'25px'}} onClick={() => alert("Why did you feel the need to click on me? So intrusive...")}>
                 Ehsan Syed
               </Button>
             </Box>
             <Box>
-              <Button sx={{border: '0', fontFamily: themeFontState, fontWeight: themeFontWeightState}} disabled>
-                <img
-                  width="20px"
-                  src={dancing}
-                  alt='stick figure dancing'
-                />
-              </Button>
-              <Button style={{fontSize:'25px'}} sx={{margin: '0px 10px', color: themeColorState, fontFamily: themeFontState, fontWeight: themeFontWeightState}} onClick={() => alert("You are navigating to the about me page.")} > 
+              <Button sx={{margin: '0px 10px', color: themeColorState, fontFamily: themeFontState, fontWeight: themeFontWeightState, fontSize:'25px'}} onClick={() => alert("You are navigating to the about me page.")} > 
                 About Me
               </Button>
-              <Button style={{fontSize:'25px'}} sx={{margin: '0px 10px', color: themeColorState, fontFamily: themeFontState, fontWeight: themeFontWeightState}} onClick={() => alert("You are going to look at some of my projects.")} > 
+              <Button sx={{margin: '0px 10px', color: themeColorState, fontFamily: themeFontState, fontWeight: themeFontWeightState, fontSize:'25px'}}  onClick={() => alert("You are going to look at some of my projects.")} > 
                 My Projects
               </Button>
-              <Button style={{fontSize:'25px'}} sx={{margin: '0px 10px', color: themeColorState, fontFamily: themeFontState, fontWeight: themeFontWeightState}} onClick={() => alert("You are going to take a look at my resume.")} > 
+              <Button sx={{margin: '0px 10px', color: themeColorState, fontFamily: themeFontState, fontWeight: themeFontWeightState, fontSize:'25px'}}  onClick={() => alert("You are going to take a look at my resume.")} > 
                 Resume
               </Button>
             </Box>
