@@ -1,78 +1,113 @@
-import { useEffect } from 'react';
-import TypeWriter from 'typewriter-effect';
-import WebFont from 'webfontloader';
-import dancing from './media/cartoonDancing.gif'
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import TypeWriter from 'typewriter-effect';
+import backupDancer from './media/cartoonDancing.gif'
 
-const themeFont = 'Montserrat';
-const themeColor = '#5D3FD3';
 
-export const ESDynamicGreeting = () => {
+export const ESDynamicGreeting = (props) => {
+    const { themeColor, themeFont, themeFontWeight } = props;
+    const [themeColorState, setThemeColorState] = useState(themeColor);
+    const [themeFontState, setThemeFontState] = useState(themeFont);
+    const [themeFontWeightState, setThemeFontWeightState] = useState(themeFontWeight);
     useEffect(() => {
-        WebFont.load({
-            google: {
-                families: ['Montserrat', 'Times New Roman', 'Finlandica']
-            }
-        })
-    }, []);
+        setThemeColorState(themeColor);
+        setThemeFontState(themeFont);
+        setThemeFontWeightState(themeFontWeight);
+        console.log('mounting ESDynamicGreeting...');
+        return () => {console.log('unmounting ESDynamicGreeting...')}
+    }
+    , [themeColor, themeFont, themeFontWeight]);
 
     return (
-        <div style={{display: 'flex', flexWrap: 'nowrap', justifyContent: 'space-evenly', marginLeft: '50px', marginTop: '40px'}}>
-            <div style={{marginRight: '300px'}}>
-                <h2 style={{fontFamily: themeFont, fontSize:'40px', color: themeColor}}>
-                    <TypeWriter 
-                    options={{
-                        strings: ['Hey!', 'Hello!', 'Greetings!', "What's up!?"],
-                        autoStart: true,
-                        pauseFor: 3000,
-                        loop: true, 
+        <div style={{
+                display: 'flex',
+                margin: '100px 80px 80px 80px'
+            }}
+        >
+            <div // The typewriter greeting
+                    style={{
+                        color: themeColorState, 
+                        fontFamily: themeFontState, 
+                        fontSize: '40px',
+                        position: 'relative'
                     }}
-                    />
-                </h2>
-                <h2 style={{fontFamily: themeFont, fontSize: '25px', color: themeColor}}>
+
+                > 
                     <TypeWriter 
-                    options={{
-                        strings: "I'm Ehsan, welcome to my website!",
-                        autoStart: true,
-                        loop: false, 
-                    }}
+                        options={{
+                            strings: "Hi I'm Ehsan, welcome to my website!",
+                            autoStart: true,
+                            loop: false, 
+                        }}
                     />
-                </h2>
             </div>
-            <div>
-                <div style={{marginTop: '70px', marginRight: '200px', display: 'flex'}} >
-                    <motion.div animate={{scale: 1, rotate: 1800}} 
-                        initial={{scale: 0}}
-                        transition={{
-                            ease: "linear",
-                            duration: 8,
-                            repeat: Infinity,
-                            delay: 5,
-                            repeatDelay: 20}}>
-                        <img 
-                            src={dancing}
-                            alt='cartoon dancing'
-                            width='70px'
-                        />
-                    </motion.div>
-                    <motion.div animate={{scale: 1, rotate: 1800}} 
-                        initial={{scale: 0}}
-                        transition={{
-                            ease: "linear",
-                            duration: 8,
-                            repeat: Infinity,
-                            delay: 5,
-                            repeatDelay: 20}}>
-                            <div>
-                                <img 
-                                    src={dancing}
-                                    alt='cartoon dancing'
-                                    width='70px'
-                                />
-                            </div>
-                    </motion.div>
-                </div>
-            </div>
+            <motion.div // A backup dancer
+                    style={{
+                        color: themeColorState, 
+                        fontFamily: themeFontState, 
+                        position: 'absolute',
+                        right: '450px'
+                    }}
+                    animate={{
+                        scale: 1,
+                        x: 20,
+                    }}
+                    initial={{
+                        scale: 0,
+                        x: 20
+                    }}
+                    transition={{
+                        delay: 5,
+                        duration: 1
+                    }}
+                    whileHover={{
+                        rotate: 360,
+                        transition: {
+                            duration: 1
+                        }
+                    }}
+                > 
+                   <img 
+                        src={backupDancer}
+                        width='60px'
+                        alt='backup dancer'
+                   />
+            </motion.div>
+            <motion.div // Another backup dancer
+                    style={{
+                        color: themeColorState, 
+                        fontFamily: themeFontState, 
+                        position: 'absolute',
+                        right: '350px'
+                    }}
+                    animate={{
+                        scale: 1,
+                        x: 20,
+                    }}
+                    initial={{
+                        scale: 0,
+                        x: 20
+                    }}
+                    transition={{
+                        delay: 5,
+                        duration: 1
+                    }}
+                    whileHover={{
+                        scale: 1.3,
+                        transition: {
+                            duration: 1
+                        }
+                    }}
+                > 
+                   <img 
+                        src={backupDancer}
+                        width='60px'
+                        alt='backup dancer'
+                   />
+            </motion.div>
         </div>
     );
+
+
+
 }
