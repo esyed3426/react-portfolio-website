@@ -15,8 +15,8 @@ export const ESNavBar = (props) => {
         setThemeColorState(themeColor);
         setThemeFontState(themeFont);
         setThemeFontWeightState(themeFontWeight);
-        console.log('mounting ESDynamicGreeting...');
-        return () => {console.log('unmounting ESDynamicGreeting...')}
+        console.log('mounting ESNavBar...');
+        return () => {console.log('unmounting ESNavBar...')}
     }
     , [themeColor, themeFont, themeFontWeight]);
 
